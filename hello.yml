@@ -13,5 +13,6 @@ spring:
     jdbc-url: ENC(kfXJgZSaRLqvzOczZlzXgIEXrp2ZxlKLyOEwR6qKyhoOYH5J8suw7cWKi9WKbMpFWQsEnfE9X9tUr1JvLacSxS+ti6WAHSV9xHoVnGKtmpQ=)
     username: ENC(WrM8tEgH/skLR/WswsS4x6rgYmB13pwAzd+vkexLsKBjrzOWxqjHhGMkxaQfKRXw)
     password: ENC(lh0Q61/C8eRNh8Iw7BE7k5Sa3lpDBkH1FivR21TPnMnNZTHZ4cu2KdBOVSF6MwoL)
+    driverClassName: org.mariadb.jdbc.Driver
     testWhileIdle: true
     validationQuery: SELECT 1
