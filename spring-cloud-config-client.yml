@@ -1,4 +1,4 @@
 server:
   port: 8081
 
-my.greeting: hello again from spring-cloud-config-client
+my.greeting: hello from spring-cloud-config-client
