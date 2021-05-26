@@ -1,0 +1,17 @@
+server-name: hello-dev-properties
+
+---
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDB103Dialect
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+  datasource:
+    url: ENC(kfXJgZSaRLqvzOczZlzXgIEXrp2ZxlKLyOEwR6qKyhoOYH5J8suw7cWKi9WKbMpFWQsEnfE9X9tUr1JvLacSxS+ti6WAHSV9xHoVnGKtmpQ=)
+    username: ENC(q+pQLqz8OrFXpiTAEc/LDI3rzj+Sk2oUmj6wXhxXcQcMen8mZp4A+Zp0VZzUjGf1)
+    password: ENC(qWUDGfvduUPotpx3RxqSiQOagMAZMHpPKMKbn98DzhiRSz6Kw7UF5sTxGQ/72mY3)
+    testWhileIdle: true
+    validationQuery: SELECT 1
