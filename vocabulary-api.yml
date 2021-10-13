@@ -1,9 +1,0 @@
-logging:
-  config: ./logback.xml
-
-spring:
-  webflux:
-    base-path: /Vocabulary
-
-server:
-  port: 8080

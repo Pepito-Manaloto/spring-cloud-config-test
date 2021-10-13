@@ -1,0 +1,58 @@
+server:
+  port: 8080
+  ssl:
+    #keytool -genkeypair -alias vocabularyapi -keyalg RSA -keysize 4096 -storetype PKCS12 -keystore vocabulary-api.p12 -keypass <pass> -storepass <pass> -validity 3650 -dname "CN=Vocabulary Api,OU=Aaron,O=Aaron,L=Singapore,ST=Singapore,C=PH" -ext SAN=dns:localhost,ip:127.0.0.1
+    #keytool -export -alias vocabularyapi -file vocabulary-api.crt -keystore vocabulary-api.p12 -storepass <pass>
+    #keytool -import -alias springconfigserver -file spring-config-server.crt -keystore vocabulary-api.p12 -storepass <pass>
+    enabled: true
+    #client-auth: need
+    key-alias: vocabularyapi
+    key-store: config/keystore/vocabulary-api.p12
+    key-store-type: PKCS12
+    key-store-password: ENC(ONQNcl4kB6KdYI4P/E+ylLNHYFVlZv2hjTCDIMNMIMpSEsMVtEtUsch/LWsjCe3y)
+
+security:
+  jjwt:
+    secret: ENC(DJ0HiImN9H9FQsReAongpjV7xJjpyaaD3JFFm78RH5GeFC3L8m6mbb8DRj6mgeDuTilbwPXLswbv+vYOXu64ze2TIbIuCHFQ8n/owUDp29AN/CNWbDVVvNGUAAkW8IcXJG1IkR5F2n8G2xfrcAI8rQ==)
+    expiration: 60
+  authentication:
+    password: ENC(eoHIfdLGJ+T9/UQEQJ7VMqlsUt6LyDFAyNN932PkXB0E9q3o8U2m6aS/eJWmk+qu)
+
+spring:
+  webflux:
+    base-path: /Vocabulary
+  datasource:
+    url: ENC(iBaJofKZjWy9NDpuNC5wd4M8i/3RyhQfgSl4f4x6tLgzYuzgBxX93kqSBHwszfzrtLGW69Wx2zG4qKIXntjF8PzU/GpLxYN6EGrmJYgg7+k=)
+    username: ENC(awGg9IVxTYSRiQTrjg5LveDpEvr9XU6Qfv8P9W7zq+H3WCMxm+NE6X1JfiUXqOFh)
+    password: ENC(sUlYYffIb8t7gsonvhF+aMYBv7J9Stz5/WzL15vWFkQ46w1LN1qMaQlGQBtGUpoX)
+    testWhileIdle: true
+    validationQuery: SELECT 1
+    hikari:
+      connectionTimeout: 60000
+      idleTimeout: 120000
+      maxLifetime: 360000
+      minimumIdle: 10
+      maximumPoolSize: 25
+      leakDetectionThreshold: 90000
+  jpa:
+    hibernate:
+      show_sql: false
+      use_sql_comments: false
+      format_sql: false
+      ddl-auto: none
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDB103Dialect
+    jackson:
+      mapper:
+        accept-case-insensitive-enums: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: warn
+    com:
+      zaxxer:
+        hikari: warn
