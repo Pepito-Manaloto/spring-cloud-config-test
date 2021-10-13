@@ -49,6 +49,14 @@ spring:
     jackson:
       mapper:
         accept-case-insensitive-enums: true
+  flyway: # Flyway core only used in tests, prefer to use plugin for actual migration
+    enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
 
 logging:
   level:
