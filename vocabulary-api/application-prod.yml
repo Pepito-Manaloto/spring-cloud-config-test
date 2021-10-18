@@ -9,22 +9,22 @@ server:
     key-alias: vocabularyapi
     key-store: config/keystore/vocabulary-api.p12
     key-store-type: PKCS12
-    key-store-password: ENC(ONQNcl4kB6KdYI4P/E+ylLNHYFVlZv2hjTCDIMNMIMpSEsMVtEtUsch/LWsjCe3y)
+    key-store-password: ENC(CZIdXEvnrFte+OCOkiTSjOSl1/enu2NCgp0r3ofhKozkBrwBLn/NVWgtpfq5BVmX)
 
 security:
   jjwt:
-    secret: ENC(DJ0HiImN9H9FQsReAongpjV7xJjpyaaD3JFFm78RH5GeFC3L8m6mbb8DRj6mgeDuTilbwPXLswbv+vYOXu64ze2TIbIuCHFQ8n/owUDp29AN/CNWbDVVvNGUAAkW8IcXJG1IkR5F2n8G2xfrcAI8rQ==)
+    secret: ENC(bIXBnZYmyTirv2SjydfEuQKO9uEPgaifPrOPCSBoJwmHlLAlRyykIyYdkc+P0frB48mdQpAia5ASzVX+BMJ8TQDaZWr6+QJSQFCB+/ukS4noVFcJZQM+o5twPbgJhf8LSE2lgXEhpUG+t8sikoYt0w==)
     expiration: 60
   authentication:
-    password: ENC(eoHIfdLGJ+T9/UQEQJ7VMqlsUt6LyDFAyNN932PkXB0E9q3o8U2m6aS/eJWmk+qu)
+    password: ENC(j4IrvGLp0XRKgQXYbawz+5xee+kJTJ92OcJUPMndaBNlkOjGOT8BeX6iK2cdKATw)
 
 spring:
   webflux:
     base-path: /Vocabulary
   datasource:
-    url: ENC(iBaJofKZjWy9NDpuNC5wd4M8i/3RyhQfgSl4f4x6tLgzYuzgBxX93kqSBHwszfzrtLGW69Wx2zG4qKIXntjF8PzU/GpLxYN6EGrmJYgg7+k=)
-    username: ENC(awGg9IVxTYSRiQTrjg5LveDpEvr9XU6Qfv8P9W7zq+H3WCMxm+NE6X1JfiUXqOFh)
-    password: ENC(sUlYYffIb8t7gsonvhF+aMYBv7J9Stz5/WzL15vWFkQ46w1LN1qMaQlGQBtGUpoX)
+    url: ENC(nGdar7UaDXvi/4mX8g1ccE1zCg6pVOIs9yjzep5O6OzcMJsDjfgSiSIRzQfuy00Ym/R0mV6qMcTf/aTsjn+nFFJ/xFwtzc4RhuytLJSecXnPf16D1GHS5PRXWRbiB7/R)
+    username: ENC(7VCZ6YVdwVHlonLGbd5YBfTlrJukjvuftmN6NrbmOCYjlnf56Xwpe+JyM7LKNL/O)
+    password: ENC(aKgDmLp0PwuPfa+GKcnbkZkQ4RsFQKibZQ8TClIJ7PLCDLD0krftN6RgX9m13d/U)
     testWhileIdle: true
     validationQuery: SELECT 1
     hikari:
