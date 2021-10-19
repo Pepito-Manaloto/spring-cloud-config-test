@@ -52,7 +52,7 @@ spring:
     baseline-on-migrate: true
     schemas: my_vocabulary
     default-schema: my_vocabulary
-    locations: filesystem:deployment/db/migration
+    locations: filesystem:db/migration
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
     url: ENC(LYmLP78qrFNRy2bbk3PKn1FLni4dq1Do53NDQZK2CYCQUQxCIse335HH05hSkMtrARcb7jIiuon4QeaAUM+5tk2OsUgrjYcus3sStTP/D+s=)
