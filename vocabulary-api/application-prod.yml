@@ -47,8 +47,15 @@ spring:
     jackson:
       mapper:
         accept-case-insensitive-enums: true
-  flyway: # Flyway core only used in tests, prefer to use plugin for actual migration
-    enabled: false
+  flyway: # Will start fresh on every docker-compose run
+    enabled: true
+    baseline-on-migrate: true
+    schemas: my_vocabulary
+    default-schema: my_vocabulary
+    locations: filesystem:deployment/db/migration
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    url: ENC(LYmLP78qrFNRy2bbk3PKn1FLni4dq1Do53NDQZK2CYCQUQxCIse335HH05hSkMtrARcb7jIiuon4QeaAUM+5tk2OsUgrjYcus3sStTP/D+s=)
 
 management:
   endpoints:
